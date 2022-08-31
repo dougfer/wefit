@@ -16,7 +16,7 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({ children, Ico
       {Icon && (
         <IconContent>
           {Icon}
-          {(!!quantityInCart && quantityInCart > 0) ? quantityInCart : <span style={{ width: '18px' }} />}
+          {(!!quantityInCart && quantityInCart > 0) ? <span style={{ width: '20px' }}>{quantityInCart}</span> : <span style={{ width: '20px' }} />}
         </IconContent>
       )}
       <Title>

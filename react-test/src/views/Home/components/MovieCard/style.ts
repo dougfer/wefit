@@ -4,8 +4,8 @@ export const Card = styled.div`
   padding: 11px;
   background-color: ${({ theme }) => theme.colors.background_secondary};
   width: 100%;
-  max-width: 300px;
-  display: flex;
+  /* max-width: 300px; */
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   border-radius: 4px;

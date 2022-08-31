@@ -25,7 +25,7 @@ display: inline-block;
   margin: 0;
 `
 export const IconContent = styled.div`
-  margin: 0 10px;
+  padding: 0 10px;
   display: flex;
   color: ${({ theme }) => theme.colors.background_secondary};
   gap: 5px;
