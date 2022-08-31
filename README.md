@@ -10,9 +10,10 @@ O projeto contém os dois desafios:
  Será preciso executar o arquivo index.html no caminho wefit-test-js-assets\wefit-test
  
  ### react-test
- - Instalar as dependências de pacote com dentro do arquivo com o comando "npm install". 
+ (Dentro da pasta react-teste)
+ - Instalar as dependências de pacote com o comando "npm install". 
  - Executar o servidor do json-server com o comando "npm run api".
- - Executar o comando "npm start" para iniciar o projeto react.
+ - Em outra janela do terminal: executar o comando "npm start" para iniciar o projeto react.
  
  #### Telas
 
