@@ -1,15 +1,14 @@
-import axios from 'axios'
 import { Movie } from 'src/types'
+import { createApi, fetchBaseQuery  } from '@reduxjs/toolkit/query/react'
 
-const api = axios.create({
-  baseURL: 'http://192.168.0.42:3333',
+export const movieApi = createApi({
+  reducerPath: 'movieApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.0.42:3333' }),
+  endpoints: (builder) => ({
+    getMovies: builder.query<Movie[], void>({
+      query: () => 'products'
+    })
+  })
 })
 
-export const getMoviesOperation = async (): Promise<Movie[]> => {
-  try {
-    const response = await api.get('/products')
-    return response.data
-  } catch (err: any) {
-    return err
-  }
-}
+export const { useGetMoviesQuery } = movieApi

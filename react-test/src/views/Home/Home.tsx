@@ -1,16 +1,11 @@
 import React from 'react'
 import { Container, LoadingIcon } from './styles'
-import { useQuery } from '@tanstack/react-query'
-import { getMoviesOperation } from 'src/services'
+import { useGetMoviesQuery } from 'src/services'
 import { MovieCard } from './components'
 
 export const Home: React.FC = () => {
 
-  const { data, isLoading } = useQuery(['getMovies'], getMoviesOperation)
-
-  if(data && data?.length === 0) {
-    return <div style={{ height: '100%', backgroundColor: 'red' }} />
-  }
+  const { data, isLoading } = useGetMoviesQuery()
 
   return (
     <Container>
