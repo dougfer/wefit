@@ -11,7 +11,7 @@ import { formatToRealStr } from 'src/utils/format'
 import { Button } from 'src/components'
 import { FaCartPlus } from 'react-icons/fa'
 import { Movie } from 'src/types'
-import { useAppDispatch } from 'src/store/hooks'
+import { useAppDispatch, useAppSelector } from 'src/store/hooks'
 import { addMovie } from 'src/store/features/movieSlice'
 
 interface MovieCardProps {
@@ -19,8 +19,11 @@ interface MovieCardProps {
 }
 
 export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
-
   const dispatch = useAppDispatch()
+
+  const { movies } = useAppSelector((state) => state.moviesList)
+
+  const moviesInCartCounter = movies.filter((mov) => mov.id === movie.id).length
 
   const handleAddMovie = (movie: Movie) => {
     dispatch(addMovie(movie))
@@ -36,6 +39,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
       <Button
         Icon={<FaCartPlus size={13} />}
         onClick={() => handleAddMovie(movie)}
+        quantityInCart={moviesInCartCounter}
       >
         Adicionar ao Carrinho
       </Button>

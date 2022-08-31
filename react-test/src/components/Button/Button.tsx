@@ -7,15 +7,16 @@ import {
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   Icon?: React.ReactElement
+  quantityInCart?: number
 } 
 
-export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({ children, Icon, onClick }) => {
+export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({ children, Icon, onClick, quantityInCart }) => {
   return (
     <Container onClick={onClick}>
       {Icon && (
         <IconContent>
           {Icon}
-          1
+          {(!!quantityInCart && quantityInCart > 0) ? quantityInCart : <span style={{ width: '18px' }} />}
         </IconContent>
       )}
       <Title>
