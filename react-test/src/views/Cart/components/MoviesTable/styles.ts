@@ -6,6 +6,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  margin-bottom: 100px;
+  background-color: ${({ theme }) => theme.colors.background_secondary};
 `
 
 export const TableHead = styled.th`

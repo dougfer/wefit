@@ -13,7 +13,6 @@ import {
   TotalValue
 } from './styles'
 import { QuantityCell } from './components'
-import { useNavigate } from 'react-router-dom'
 import { Button } from 'src/components'
 import { FaTrash } from 'react-icons/fa'
 import { useTheme } from 'styled-components'
@@ -39,13 +38,7 @@ export const MoviesTable: React.FC<MoviesTableProps> = ({ handleConfirmPurchase 
   const { colors } = useTheme()
 
   const dispatch = useAppDispatch()
-  
-  const navigate = useNavigate()
-  
-  const handleBack = () => {
-    navigate('/')
-  }
-
+    
   const handleDeleteMovie = (id: number) => {
     dispatch(removeAllByIndex(id))
   }
