@@ -13,7 +13,6 @@ import { useTheme } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from 'src/store/hooks'
 
-
 export const Header: React.FC = () => {
   
   const navigate = useNavigate()

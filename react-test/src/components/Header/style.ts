@@ -5,6 +5,7 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 20px 0;
   margin-bottom: 41px;
+  width: 100%;
 `
 export const Logo = styled.p`
   color: ${({ theme }) => theme.colors.background_secondary};
