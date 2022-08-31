@@ -28,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "json-server .\\src\\services\\server.json --host 192.168.0.42 --port 3333 --delay 700"
+    "api": "json-server .\\src\\services\\server.json --host 192.168.0.42 --port 3333 --delay 700",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "eslintConfig": {
     "extends": [
