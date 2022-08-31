@@ -11,6 +11,11 @@ export const Container = styled.button`
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s all;
+  }
 `
 export const Title = styled.p`
 display: inline-block;

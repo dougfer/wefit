@@ -3,12 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 0;
   margin-bottom: 41px;
 `
 export const Logo = styled.p`
   color: ${({ theme }) => theme.colors.background_secondary};
   font-size: 25px;
+  cursor: pointer;
   ${({ theme }) => theme.fonts.bold}
 `
 
@@ -42,4 +43,9 @@ export const Icon = styled.div`
   align-items: center;
   justify-content: center;
   margin-left: 16px;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all .2s ease;
+  }
 `

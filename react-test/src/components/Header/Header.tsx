@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
 
   return (
     <Container>
-      <Logo>
+      <Logo onClick={() => navigate('/')}>
         WeMovies
       </Logo>
       <CartSection>
